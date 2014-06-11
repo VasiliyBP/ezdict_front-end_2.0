@@ -18,6 +18,10 @@ ezdict_front-end_2.0
 
 Страница автоматически обновляется при изменении файлов, файл app.scss автоматически компилируется в css, в этом файле должны быть импорты нужных файлов из папки sass
 
+Верстать [сюда][verstat]  
+JS [сюда][js]
+
+
 Завершить работу сервера: нажать **Ctrl + C**  
 Выйти из виртуалки: **logout**  
 Завершить работу виртуалки: **vagrant halt** 
@@ -32,3 +36,5 @@ ezdict_front-end_2.0
 [vboxext]:http://download.virtualbox.org/virtualbox/4.3.12/Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack
 [vagrant]:https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3.msi
 [git]: https://msysgit.googlecode.com/files/PortableGit-1.8.1.2-preview20130201.7z
+[verstat]: https://github.com/mrdslack/ezdict_front-end_2.0/blob/master/index/partial/index/index.html
+[js]: https://github.com/mrdslack/ezdict_front-end_2.0/blob/master/index/partial/index/index.js
