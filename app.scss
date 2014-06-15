@@ -12,6 +12,241 @@ $margin: 12222px;
   border-color: $blue;
 }
 
-body {
-  background: red;
+@import "compass/reset" ;
+@import "compass/utilities";
+@import "compass/css3";
+
+html,body {
+  background: #e5eef2;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h1 {font-size: 36px;}
+h2 {font-size: 30px;}
+h3 {font-size: 24px;}
+h4 {font-size: 18px;}
+h5 {font-size: 14px;}
+h6 {font-size: 12px;}
+img{
+  max-width: 100%;
+}
+.login-logo-wrapp{
+  @include pie-clearfix;
+}
+.header-pattern {
+  @include pie-clearfix;
+  background: url('../img/header_pattern4.gif') center center;
+}
+.header-container{
+  position: relative;
+  width:100%;
+  max-width:1470px;
+  margin:0 auto;
+}
+header{
+  max-width: 890px; /*51.02040816326531%;*/
+  margin: 0 auto 20px  ;
+  padding-top: 15px;
+
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+    opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
+  }
+}
+.logo{
+  vertical-align: bottom;
+  width: 44%;
+  float: left;
+}
+.login-btns{
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+.search-wrapper{
+  margin-left:2.666666666666667% ;
+  width: 53.33333333333333%;
+  float: left;
+  color: white;
+  text-align: right ;
+}
+.search-wrapper, .search-form   {
+  color: white;
+}
+.search-form {
+  font-size:16px;
+  font-style: italic;
+  width: 100%;
+  height: 35px;
+  background:none;
+  border: 2px solid white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+.appeal{
+  color: white;
+  p {
+    margin: 1em 0;
+    font-size: 25px;
+  }
+}
+.carousel-wrapp {
+  height:525px;
+  margin:0 auto;
+  position: relative;
+  background: url('../img/book2237cc.png') no-repeat bottom center;
+}
+.text-wrapper{
+  color: white;
+  max-width: 890px ; /*51.02040816326531% ;*/
+  height: 435px;
+  background: rgba(55, 27, 23, 0.20);
+  margin: 0 auto;
+  padding: 30px 3.5%;
+  @include border-radius(10px);
+  @include box-sizing(border-box);
+  h3 {
+    font-family: times new roman;
+
+    text-align: center;
+  }
+  .author-photo{
+    width: 30%;
+    float: left;
+  }
+  .author-text {
+    width:65%;
+    float: left;
+    p {
+      margin-top: 30px;
+    }
+
+  }
+}
+.layout{
+  max-width: 1470px;
+  margin: 0 auto ;
+}
+.promo{
+  margin: 20px 0;
+  @include pie-clearfix;
+}
+.promo-item{
+  width:31.97278911564626%;
+  height: 230px;
+  margin: 15px 0.6802721088435374%;
+  float: left;
+  background: gray;
+}
+.first{
+  background: #74b2e5;
+}
+.second{
+  background: #709bbe;
+}
+.third {
+  background: #109927;
+}
+.UC-inner {
+  clear:both;
+  margin-top: 20px;
+  overflow:hidden;
+}
+.youtube-wrap{
+  float:left;
+  margin: 0 0.6802721088435374%;
+  height: 550px;
+  width: 36.73469387755102%;
+  background: #8EAAB4;
+}
+.popular-new-content{
+  float:left;
+  margin: 0 0.6802721088435374%;
+  height: 550px;
+  width: 60.54421768707483%;
+}
+.pop-new-header{
+  height: 70px;
+  background: #258ea1;
+  margin-bottom: 15px;
+}
+.pop-new-col-1{
+  width:44.9438202247191%;
+  margin-right: 2.247191011235955%;
+  height:470px;
+  background: #258ea2;
+  float:left;
+}
+.pop-new-col-2{
+  height:470px;
+  width: 52.80898876404494%;
+  background: #258ea6;
+  float:left;
+}
+
+/*media quaeries*/
+
+@media only screen and (max-width: 1050px) {
+  .text-wrapper{
+    width: 90% ;
+  }
+  header {
+    width: 90% ;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /*promo*/
+  .first{
+    width: 48.6394557823%;
+  }
+  .second{
+    width: 48.6394557823%;
+  }
+  .third {
+    margin-top: 5px;
+    width: 98.63945578231293%;
+  }
+  /*end-promo*/
+
+  /*news*/
+  .popular-new-content {
+    margin-top: 15px;
+    width: 98.63945578231293%;
+  }
+  .youtube-wrap {
+    width: 98.63945578231293%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .first{
+    width: 98.63945578231293%;
+    margin-top: 15px;
+  }
+  .second{
+    width: 98.63945578231293%;
+    margin-top: 5px;
+  }
+  .third {
+    margin-top: 5px;
+    width: 98.63945578231293%;
+  }
+
 }
