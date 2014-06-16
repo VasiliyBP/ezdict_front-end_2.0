@@ -74,9 +74,9 @@ module.exports = function (grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: './',
+					sassDir: 'sass',
 					cssDir: 'temp',
-					specify: 'app.scss',
+					specify: ['sass/app.scss', 'sass/ie.scss'],
 				}
 			}
 		},
@@ -106,7 +106,8 @@ module.exports = function (grunt) {
                 options: {
                     read: [
                         {selector: 'script[data-concat!="false"]', attribute: 'src', writeto: 'appjs'},
-                        {selector: 'link[rel="stylesheet"][data-concat!="false"]', attribute: 'href', writeto: 'appcss'}
+                        {selector: 'link[rel="stylesheet"][data-concat!="false"]', attribute: 'href', writeto: 'appcss'},
+						{selector: 'link[rel="stylesheet"][data-ie="true"]', attribute: 'href', writeto: 'iecss'}
                     ]
                 },
                 src: 'index.html'
@@ -116,8 +117,9 @@ module.exports = function (grunt) {
                     remove: ['script[data-remove!="false"]', 'link[data-remove!="false"]'],
                     append: [
                         {selector: 'body', html: '<script src="app.full.min.js"></script>'},
-                        {selector: 'head', html: '<link rel="stylesheet" href="app.full.min.css">'}
-                    ]
+                        {selector: 'head', html: '<link rel="stylesheet" href="app.full.min.css">'},
+						{selector: 'head', html: '<!--[if IE]><link rel="stylesheet" href="ie.min.css"><![endif]-->'}
+					]
                 },
                 src: 'index.html',
                 dest: 'dist/index.html'
@@ -125,8 +127,10 @@ module.exports = function (grunt) {
         },
         cssmin: {
             main: {
-                src: ['temp/app.css', '<%= dom_munger.data.appcss %>'],
-                dest: 'dist/app.full.min.css'
+				files: {
+					'dist/app.full.min.css': ['temp/app.css', '<%= dom_munger.data.appcss %>'],
+					'dist/ie.min.css': ['temp/ie.css', '<%= dom_munger.data.iecss %>']
+				}
             }
         },
         concat: {
