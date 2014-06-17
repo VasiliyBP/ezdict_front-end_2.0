@@ -22,13 +22,14 @@ h6 {font-size: 12px;}
 img{
   max-width: 100%;
 }
-.login-logo-wrapp{
+.login-logo-wrap{
   @include pie-clearfix;
 }
 .header-pattern {
   @include pie-clearfix;
   background: url('../img/header_pattern4.gif') center center;
 }
+
 .header-container{
   position: relative;
   width:100%;
@@ -39,11 +40,10 @@ header{
   max-width: 890px; /*51.02040816326531%;*/
   margin: 0 auto 20px  ;
   padding-top: 15px;
-
-
   ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #fff;
   }
+
   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color:    #fff;
     opacity:  1;
@@ -55,27 +55,34 @@ header{
   :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #fff;
   }
+  input:focus::-moz-placeholder {color: transparent;}
+  input:focus::-webkit-input-placeholder {color: transparent;}
+  input:focus:-moz-placeholder {color: transparent;}
+  input:focus:-ms-input-placeholder {color: transparent;}
 }
-.logo{
+.logo-wrap{
   vertical-align: bottom;
   width: 44%;
   float: left;
 }
-.login-btns{
+.login-btn{
   margin-top: -5px;
   margin-bottom: 10px;
+  font-weight: bold;
+  span{
+    cursor: pointer;
+  }
 }
-.search-wrapper{
+.search-login-wrap{
   margin-left:2.666666666666667% ;
   width: 53.33333333333333%;
   float: right;
   color: white;
   text-align: right ;
-}
-.search-wrapper, .search-form   {
-  color: white;
+
 }
 .search-form {
+  color: white;
   font-size:16px;
   font-style: italic;
   width: 100%;
@@ -140,6 +147,7 @@ header{
   }
 }
 .reg-btn {
+  width: 315px; //ie position center hack
   max-width: 315px;
   position: absolute;
   bottom: 30px;
@@ -177,7 +185,6 @@ header{
   height: 230px;
   margin: 15px 0.6802721088435374%;
   float: left;
-  background: gray;
 }
 .first{
   background: #74b2e5;
@@ -273,28 +280,21 @@ header{
     margin-top: 5px;
     width: 98.63945578231293%;
   }
-
-
   .author-photo{
     text-align: center;
     width: 100%;
-
-
   }
   .author-text {
-
-    width: 100%;
-
-  }
-
-  .logo{
-
     width: 100%;
   }
-  .search-wrapper{
-
+  .logo-wrap{
+    text-align: center;
     width: 100%;
-
   }
-
+  .search-login-wrap{
+    width: 100%;
+  }
+  .reg-btn {
+    width: 100%;
+  }
 }
