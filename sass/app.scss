@@ -100,14 +100,14 @@ header{
     font-size: 25px;
   }
 }
-.carousel-wrapp {
+.carousel-wrap {
   min-height:495px;
   margin:0 auto;
   padding-bottom: 30px;
   position: relative;
   background: url('../img/book2237cc.png') no-repeat bottom center;
 }
-.text-wrapper{
+.text-wrap{
   position: relative;
   color: white;
   max-width: 890px ; /*51.02040816326531% ;*/
@@ -121,34 +121,34 @@ header{
     text-align: center;
   }
 }
-.excerption-wrapp{
-  margin-top: 30px;
-  @include pie-clearfix;
-}
-.excerption {
-  line-height: 18px;
-  text-shadow: 0 0 20px black, 0 0 30px black;
-}
-.author-photo{
-  font-size: 100%;
-  width: 30%;
-  float: left;
-  padding-right: 4%;
-  @include box-sizing(border-box);
-
-}
-.author-text {
-  font-size: 16px;
-  width: 70%;
-  float: left;
-  @include box-sizing(border-box);
-  p {
+  .excerption-wrap{
     margin-top: 30px;
+    @include pie-clearfix;
   }
-}
+  .excerption {
+    line-height: 18px;
+    text-shadow: 0 0 20px black, 0 0 30px black;
+  }
+  .author-photo{
+    font-size: 100%;
+    width: 30%;
+    float: left;
+    padding-right: 4%;
+    @include box-sizing(border-box);
+    
+    }
+   .author-text {
+    font-size: 16px;
+    width: 70%;
+    float: left;
+    @include box-sizing(border-box);
+    p {
+      margin-top: 30px;
+    }
+  }
 .reg-btn {
   width: 315px; //ie position center hack
-  max-width: 315px;
+  max-width: 315px; 
   position: absolute;
   bottom: 30px;
   left: 0;
@@ -176,15 +176,29 @@ header{
   max-width: 1470px;
   margin: 0 auto ;
 }
-.promo{
+.promo-wrap{
   margin: 20px 0;
   @include pie-clearfix;
 }
 .promo-item{
+  color: #fff;
   width:31.97278911564626%;
-  height: 230px;
+  min-height: 230px;
   margin: 15px 0.6802721088435374%;
+  padding: 30px 1.360544217687075%;
   float: left;
+  @include box-sizing(border-box);
+  p {
+    margin: 15px auto 0 auto;
+    width: 95%;
+    font-size: 20px;
+  }
+  table {
+    margin: 0 auto;
+  }
+  td{
+    padding: 0 10px;
+  }
 }
 .first{
   background: #74b2e5;
@@ -194,6 +208,20 @@ header{
 }
 .third {
   background: #109927;
+}
+.promo-img{
+  width: 85px;
+  height: 78px;
+  background: url(../img/promo-nav.png) no-repeat;
+  vertical-align: middle;
+}
+.diagramm {
+  background-position: -85px 0;
+} 
+.dollar {
+  width: 50px;
+  background-position: -180px 0;
+
 }
 .UC-inner {
   clear:both;
@@ -235,10 +263,11 @@ header{
 /*media quaeries*/
 
 @media only screen and (max-width: 1050px) {
-  .text-wrapper{
+
+  .text-wrap{
     width: 95% ;
   }
-  header {
+  header,  {
     width: 95% ;
   }
 }
@@ -247,13 +276,16 @@ header{
   /*promo*/
   .first{
     width: 48.6394557823%;
+    min-height: 100%
   }
   .second{
     width: 48.6394557823%;
+    min-height: 100%
   }
   .third {
     margin-top: 5px;
     width: 98.63945578231293%;
+    min-height: 100%
   }
   /*end-promo*/
 
@@ -283,16 +315,16 @@ header{
   .author-photo{
     text-align: center;
     width: 100%;
-  }
-  .author-text {
+    }
+   .author-text {
     width: 100%;
   }
   .logo-wrap{
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
   }
-  .search-login-wrap{
-    width: 100%;
+  .search-login-wrap{ 
+    width: 100%; 
   }
   .reg-btn {
     width: 100%;
