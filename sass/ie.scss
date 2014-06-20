@@ -1,5 +1,33 @@
-$shit: brown;
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+.reg-btn {
+ width: 315px;
+ }
 
-.ie {
-	color: $shit;
+.text-wrap {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33371B17,endColorstr=#33371B17)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33371B17,endColorstr=#33371B17);   /* IE6 & 7 */
+    zoom: 1;
+}
+
+.reg-btn {
+	button {
+		background: transparent;
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#A5074E72,endColorstr=#A5074E72)"; /* IE8 */
+    	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#A5074E72,endColorstr=#A5074E72);   /* IE6 & 7 */
+      	zoom: 1;
+	}
+}
+
+.item-annotation {
+
+		background: transparent;
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC4094CB,endColorstr=#CC4094CB)"; /* IE8 */
+    		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC4094CB,endColorstr=#CC4094CB);   /* IE6 & 7 */
+      		zoom: 1;
+
 }

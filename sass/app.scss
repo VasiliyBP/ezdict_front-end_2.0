@@ -1,11 +1,21 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
 @import "compass/reset" ;
 @import "compass/utilities";
 @import "compass/css3";
+ 
+// colors 
+$font-main-color: white;
+$col-header-color: #3d4f56; 
+
+// width 
+$main-width: 1470px;
 
 html,body {
   background: #e5eef2;
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
 }
 
@@ -30,10 +40,10 @@ img{
   background: url('../img/header_pattern4.gif') center center;
 }
 
-.header-container{
+.header-layout{
   position: relative;
   width:100%;
-  max-width:1470px;
+  max-width:$main-width;
   margin:0 auto;
 }
 header{
@@ -41,20 +51,19 @@ header{
   margin: 0 auto 20px  ;
   padding-top: 15px;
   ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #fff;
+    color: $font-main-color;
   }
-
   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #fff;
+    color: $font-main-color;
     opacity:  1;
   }
   ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #fff;
+    color: $font-main-color;
     opacity:  1;
   }
   :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #fff;
-  }
+    color: $font-main-color;
+  } 
   input:focus::-moz-placeholder {color: transparent;}
   input:focus::-webkit-input-placeholder {color: transparent;}
   input:focus:-moz-placeholder {color: transparent;}
@@ -77,24 +86,24 @@ header{
   margin-left:2.666666666666667% ;
   width: 53.33333333333333%;
   float: right;
-  color: white;
+  color: $font-main-color;
   text-align: right ;
 
 }
 .search-form {
-  color: white;
+  color: $font-main-color;
   font-size:16px;
   font-style: italic;
   width: 100%;
   height: 35px;
   background:none;
-  border: 2px solid white;
+  border: 2px solid $font-main-color;
   @include border-radius(3px);
   @include box-sizing(border-box);
   padding-left: 30px;
 }
 .appeal{
-  color: white;
+  color: $font-main-color;
   p {
     margin: 1em 0;
     font-size: 25px;
@@ -109,43 +118,63 @@ header{
 }
 .text-wrap{
   position: relative;
-  color: white;
+  color: $font-main-color;
   max-width: 890px ; /*51.02040816326531% ;*/
   background: rgba(55, 27, 23, 0.20);
   margin: 0 auto;
-  padding: 30px 4% 140px;
+  padding: 30px 4% 150px;
   @include border-radius(10px);
   @include box-sizing(border-box);
   h3 {
     font-family: 'times new roman';
     text-align: center;
   }
-}
+} 
   .excerption-wrap{
     margin-top: 30px;
     @include pie-clearfix;
   }
   .excerption {
+    position: relative;
+    text-align: justify;
     line-height: 18px;
     text-shadow: 0 0 20px black, 0 0 30px black;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      right: -3%;
+      width: 25px;
+      height: 20px;
+      background:url(../img/promo-nav.png) -425px 0 no-repeat;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -4%;
+      width: 25px;
+      height: 20px;
+      background:url(../img/promo-nav.png) -425px -23px no-repeat;
+    }
   }
-  .author-photo{
+	.author-photo{
     font-size: 100%;
-    width: 30%;
-    float: left;
+		width: 30%;
+		float: left;
     padding-right: 4%;
-    @include box-sizing(border-box);
+		@include box-sizing(border-box);
     
-    }
-   .author-text {
+	  }
+	 .author-text {
     font-size: 16px;
-    width: 70%;
-    float: left;
-    @include box-sizing(border-box);
-    p {
-      margin-top: 30px;
-    }
-  }
+		width: 70%;
+		float: left;
+		@include box-sizing(border-box);
+		p {
+		  margin-top: 50px;
+		}
+	}
 .reg-btn {
   width: 315px; //ie position center hack
   max-width: 315px; 
@@ -155,35 +184,39 @@ header{
   right: 0;
   margin: 0 auto;
   text-align: center;
+
   button {
     font-size: 24px;
-    color: white;
+    color: $font-main-color;
     width: 100%;
     height: 90px;
     background: rgba(7,78,114,0.65);
     border: none;
     @include box-shadow(black 0 0 30px);
+
     &:hover {
       cursor: pointer;
       background: rgba(7,78,114,0.9);
     }
+    
     &:active {
       background: rgba(42,157,214,0.8);
     }
   }
 }
-.layout{
-  max-width: 1470px;
+.main-layout{
+  max-width: $main-width;
   margin: 0 auto ;
+  @include pie-clearfix;
 }
 .promo-wrap{
   margin: 20px 0;
   @include pie-clearfix;
 }
 .promo-item{
-  color: #fff;
+  color: $font-main-color;
   width:31.97278911564626%;
-  min-height: 230px;
+  min-height: 220px;
   margin: 15px 0.6802721088435374%;
   padding: 30px 1.360544217687075%;
   float: left;
@@ -196,20 +229,20 @@ header{
   table {
     margin: 0 auto;
   }
-  td{
+  td {
     padding: 0 10px;
   }
 }
-.first{
+.first {
   background: #74b2e5;
 }
-.second{
+.second {
   background: #709bbe;
 }
 .third {
   background: #109927;
 }
-.promo-img{
+.promo-img {
   width: 85px;
   height: 78px;
   background: url(../img/promo-nav.png) no-repeat;
@@ -221,48 +254,97 @@ header{
 .dollar {
   width: 50px;
   background-position: -180px 0;
-
 }
-.UC-inner {
-  clear:both;
-  margin-top: 20px;
-  overflow:hidden;
+.news-item {
+  margin-bottom: 15px;
+  height:500px;
+  background: #128929;
 }
-.youtube-wrap{
-  float:left;
-  margin: 0 0.6802721088435374%;
-  height: 550px;
-  width: 36.73469387755102%;
-  background: #8EAAB4;
-}
-.popular-new-content{
-  float:left;
-  margin: 0 0.6802721088435374%;
-  height: 550px;
-  width: 60.54421768707483%;
+.popular-new-content {
+  margin-bottom: 1.685393258426966%;
+  @include pie-clearfix;
 }
 .pop-new-header{
-  height: 70px;
-  background: #258ea1;
-  margin-bottom: 15px;
+  
+  background: #299bb0;
+  margin-bottom: 1.685393258426966%;
+  padding: 2.584269662921348% 1.685393258426966%;
+
+  h3{
+    font-weight: 500;
+    color: $font-main-color;
+  }
+}
+.new-header {
+  background: #49b7cb;
 }
 .pop-new-col-1{
+  text-align: center;
   width:44.9438202247191%;
   margin-right: 2.247191011235955%;
-  height:470px;
-  background: #258ea2;
   float:left;
 }
+.pop-new-item {
+  position: relative;
+  font-size: 0;
+  cursor: pointer;
+  $height: 50px;
+  h4 {
+    color: $font-main-color;
+    line-height: $height;
+    font-weight: 500;
+  }
+  &:hover>.item-annotation {
+    height: $height;
+    @include transition(0.3s all ease);
+  }
+}
+.item-annotation {
+  overflow: hidden;
+  position: absolute;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(64,148,203,0.8);
+}
+
+.item-1{
+  margin-bottom: 3.74999995217391%;
+}
+.item-2 {
+  margin-bottom: 0;
+}
 .pop-new-col-2{
-  height:470px;
+  text-align: center;
   width: 52.80898876404494%;
-  background: #258ea6;
+  background: #299bb0;
   float:left;
+}
+.news-col, .content-col {
+  float:left;
+  @include pie-clearfix;
+}
+.news-col {
+  margin: 0 0.6802721088435374%;
+  height: 100%;
+  width: 36.73469387755102%;
+}
+.content-col {
+  float:left;
+  margin: 0 0.6802721088435374%;
+  width: 60.54421768707483%;
 }
 
 /*media quaeries*/
+@media only screen and (max-width: 1280px)  {
 
-@media only screen and (max-width: 1050px) {
+  .promo-item {
+    min-height: 250px;
+  } 
+}
+
+@media only screen and (max-width: 1024px) {
 
   .text-wrap{
     width: 95% ;
@@ -274,43 +356,42 @@ header{
 
 @media only screen and (max-width: 992px) {
   /*promo*/
+
   .first{
     width: 48.6394557823%;
-    min-height: 100%
+    
   }
   .second{
     width: 48.6394557823%;
-    min-height: 100%
+    
   }
   .third {
     margin-top: 5px;
     width: 98.63945578231293%;
     min-height: 100%
+    
   }
   /*end-promo*/
 
   /*news*/
-  .popular-new-content {
-    margin-top: 15px;
-    width: 98.63945578231293%;
-  }
-  .youtube-wrap {
-    width: 98.63945578231293%;
-  }
+  
 }
 
 @media only screen and (max-width: 768px) {
   .first{
     width: 98.63945578231293%;
     margin-top: 15px;
+    min-height: 100%
   }
   .second{
     width: 98.63945578231293%;
     margin-top: 5px;
+     min-height: 100%
   }
   .third {
     margin-top: 5px;
     width: 98.63945578231293%;
+     min-height: 100%
   }
   .author-photo{
     text-align: center;
@@ -319,7 +400,7 @@ header{
    .author-text {
     width: 100%;
   }
-  .logo-wrap{
+	.logo-wrap{
   text-align: center;
   width: 100%;
   }
@@ -329,4 +410,19 @@ header{
   .reg-btn {
     width: 100%;
   }
+  .popular-new-content {
+    h3{
+      font-size: 18px;
+    }
+  }
+  .content-col {
+    width: 98.63945578231293%;
+    img {
+      width: 100%;
+    }
+  }
+  .news-col {
+    width: 98.63945578231293%;
+  }
+
 }
