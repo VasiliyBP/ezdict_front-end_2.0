@@ -1,15 +1,10 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset" ;
 @import "compass/utilities";
 @import "compass/css3";
- 
+
 // colors 
 $font-main-color: white;
-$col-header-color: #3d4f56; 
+$col-header-color: #3d4f56;
 
 // width 
 $main-width: 1470px;
@@ -63,7 +58,7 @@ header{
   }
   :-ms-input-placeholder { /* Internet Explorer 10+ */
     color: $font-main-color;
-  } 
+  }
   input:focus::-moz-placeholder {color: transparent;}
   input:focus::-webkit-input-placeholder {color: transparent;}
   input:focus:-moz-placeholder {color: transparent;}
@@ -129,55 +124,57 @@ header{
     font-family: 'times new roman';
     text-align: center;
   }
-} 
-  .excerption-wrap{
-    margin-top: 30px;
-    @include pie-clearfix;
+}
+.excerption-wrap{
+  margin-top: 25px;
+  @include pie-clearfix;
+}
+.excerption {
+  position: relative;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 20px;
+  text-shadow: 0 0 20px black, 0 0 30px rgba(0, 0, 0, 0.40);
+  font-family: 'times';
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -3%;
+    width: 25px;
+    height: 20px;
+    background:url(../img/promo-nav.png) -425px 0 no-repeat;
   }
-  .excerption {
-    position: relative;
-    text-align: justify;
-    line-height: 18px;
-    text-shadow: 0 0 20px black, 0 0 30px black;
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      right: -3%;
-      width: 25px;
-      height: 20px;
-      background:url(../img/promo-nav.png) -425px 0 no-repeat;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      top: -20px;
-      left: -4%;
-      width: 25px;
-      height: 20px;
-      background:url(../img/promo-nav.png) -425px -23px no-repeat;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -4%;
+    width: 25px;
+    height: 20px;
+    background:url(../img/promo-nav.png) -425px -23px no-repeat;
   }
-	.author-photo{
-    font-size: 100%;
-		width: 30%;
-		float: left;
-    padding-right: 4%;
-		@include box-sizing(border-box);
-    
-	  }
-	 .author-text {
-    font-size: 16px;
-		width: 70%;
-		float: left;
-		@include box-sizing(border-box);
-		p {
-		  margin-top: 50px;
-		}
-	}
+}
+.author-photo{
+  font-size: 100%;
+  width: 30%;
+  float: left;
+  padding-right: 4%;
+  @include box-sizing(border-box);
+
+}
+.author-text {
+  font-size: 16px;
+  width: 70%;
+  float: left;
+  @include box-sizing(border-box);
+  p {
+    margin-top: 50px;
+  }
+}
 .reg-btn {
   width: 315px; //ie position center hack
-  max-width: 315px; 
+  max-width: 315px;
   position: absolute;
   bottom: 30px;
   left: 0;
@@ -198,7 +195,7 @@ header{
       cursor: pointer;
       background: rgba(7,78,114,0.9);
     }
-    
+
     &:active {
       background: rgba(42,157,214,0.8);
     }
@@ -250,22 +247,58 @@ header{
 }
 .diagramm {
   background-position: -85px 0;
-} 
+}
 .dollar {
   width: 50px;
   background-position: -180px 0;
 }
 .news-item {
-  margin-bottom: 15px;
-  height:500px;
+  position: relative;
+  color: $font-main-color;
+  margin-bottom: 2.777777777777778%;
   background: #128929;
+  padding: 25px 4.62962962962963% 100px;
+  @include box-sizing(border-box);
+  &:last-child{
+    background:#3e6044;
+  }
+  h3{
+    font-weight: 500;
+  }
+
+}
+.news-item-img {
+  margin: 20px 0;
+  text-align: center;
+
+}
+.news-item-txt{
+  font-size: 20px;
+  line-height: 25px;
+}
+.news-item-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 4.62962962962963%;
+  width: 72px;
+  height: 73px;
+  background:transparent url('../img/promo-nav.png') -261px -5px no-repeat;
+  cursor:pointer;
+  @include border-radius(60px);
+  &:hover {
+   // @include box-shadow(white 0 0 20px, inset 0 0 20px);
+    background-color: rgba(255, 255, 255, 0.20);
+  }
+  &:active{
+    background-position: -346px -5px;
+  }
 }
 .popular-new-content {
-  margin-bottom: 1.685393258426966%;
+  //margin-bottom: 1.685393258426966%;
   @include pie-clearfix;
 }
 .pop-new-header{
-  
+
   background: #299bb0;
   margin-bottom: 1.685393258426966%;
   padding: 2.584269662921348% 1.685393258426966%;
@@ -288,47 +321,68 @@ header{
   position: relative;
   font-size: 0;
   cursor: pointer;
-  $height: 50px;
+  margin-bottom: 3.74999995217391%;
   h4 {
-    color: $font-main-color;
-    line-height: $height;
     font-weight: 500;
+    line-height: 40px;
   }
   &:hover>.item-annotation {
-    height: $height;
+    height: 100%;
     @include transition(0.3s all ease);
+  }
+  &:hover .item-annotation>h4 {
+    display: none;
+  }
+  &:hover .item-description-wrap {
+    display:table;
   }
 }
 .item-annotation {
+  color: $font-main-color;
+  font-size: 16px;
   overflow: hidden;
   position: absolute;
-  height: 0;
+  height: 40px;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(64,148,203,0.8);
+  background: rgba(64,148,203,0.9);
+}
+.item-description-wrap {
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 
-.item-1{
-  margin-bottom: 3.74999995217391%;
+.item-description-wrap .item-description-cell {
+  display: table-cell;
+  vertical-align: middle;
 }
-.item-2 {
-  margin-bottom: 0;
+.item-description {
+  width: 90%;
+  margin: 0 auto;
 }
+
+
 .pop-new-col-2{
   text-align: center;
   width: 52.80898876404494%;
-  background: #299bb0;
   float:left;
 }
+
+.item-large{
+  margin-bottom: 3.191489361702128%;
+}
+
 .news-col, .content-col {
   float:left;
-  @include pie-clearfix;
 }
 .news-col {
+  float: left;
   margin: 0 0.6802721088435374%;
   height: 100%;
   width: 36.73469387755102%;
+
 }
 .content-col {
   float:left;
@@ -341,7 +395,7 @@ header{
 
   .promo-item {
     min-height: 250px;
-  } 
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -359,22 +413,22 @@ header{
 
   .first{
     width: 48.6394557823%;
-    
+
   }
   .second{
     width: 48.6394557823%;
-    
+
   }
   .third {
     margin-top: 5px;
     width: 98.63945578231293%;
     min-height: 100%
-    
+
   }
   /*end-promo*/
 
   /*news*/
-  
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -386,26 +440,26 @@ header{
   .second{
     width: 98.63945578231293%;
     margin-top: 5px;
-     min-height: 100%
+    min-height: 100%
   }
   .third {
     margin-top: 5px;
     width: 98.63945578231293%;
-     min-height: 100%
+    min-height: 100%
   }
   .author-photo{
     text-align: center;
     width: 100%;
-    }
-   .author-text {
+  }
+  .author-text {
     width: 100%;
   }
-	.logo-wrap{
-  text-align: center;
-  width: 100%;
+  .logo-wrap{
+    text-align: center;
+    width: 100%;
   }
-  .search-login-wrap{ 
-    width: 100%; 
+  .search-login-wrap{
+    width: 100%;
   }
   .reg-btn {
     width: 100%;
@@ -423,6 +477,11 @@ header{
   }
   .news-col {
     width: 98.63945578231293%;
+  }
+  .news-item {
+    h3 {
+      text-align: center;
+    }
   }
 
 }
