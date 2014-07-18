@@ -19,6 +19,7 @@
     "angular-ui-utils": "~0.1",
     "moment": "~2.5",
     "font-awesome": "~4.0",
-    "html5shiv": "latest"
+    "html5shiv": "latest",
+	"jquery-slimscroll": "~1.3"
   }
 }
