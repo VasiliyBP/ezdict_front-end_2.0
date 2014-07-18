@@ -1,213 +1,316 @@
 <div class="col-md-12" ng-controller="IndexCtrl">
-    <div class= "header-pattern">
-        <div class="header-layout">
-            <header>
-                <div class="login-logo-wrap">
-                    <div class="logo-wrap">
-                        <a href="index.html">
-                            <img src="img/logo.png" alt="logo">
-                        </a>
+<div class="header-pattern">
+    <div class="header-layout">
+        <header>
+            <div class="login-logo-wrap">
+                <div class="logo-wrap">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="search-login-wrap">
+                    <div class="login-btn">
+                        <span>Войти</span>
                     </div>
-                    <div class="search-login-wrap">
-                        <div class="login-btn">
-                            <span>Войти</span>
-                        </div>
-                        <div>
-                            <input placeholder="Поиск текстов и видео..." class="search-form" type="input">
-                        </div>
+                    <div>
+                        <input placeholder="Поиск текстов и видео..." class="search-form" type="input">
                     </div>
                 </div>
-                <div class="appeal"><p>Читай и переводи. Попробуй прямо сейчас!</p></div>
-            </header>
-            <div class="carousel-wrap">
+            </div>
+            <div class="appeal"><p>Читай и переводи. Попробуй прямо сейчас!</p></div>
+        </header>
+        <div class="carousel-wrap">
+            <!-- STICKER START  -->
+            <div class="sticker">
+                <div class="slide-down-btn"><i class="icon-circleup"></i></div>
+                <div class="counter warning5" title="Счетчик просмотров">
+                    <p>11</p>
+                </div>
+                <div class="control-panel left">
+                    <div class="st-btn-wrap" title="Редактировать стикер">
+                        <div class="st-btn edit"><i class="icon-pen"></i></div>
+                    </div>
+                    <div class="st-btn-wrap" title="Добавить новый стикер">
+                        <div class="st-btn add-new"><i class="icon-createfile"></i></div>
+                    </div>
+                    <div class="st-btn-wrap vrashi" title="Добавить в изучаемые">
+                        <div class="st-btn add-to-learning">Aa</div>
+                    </div>
+                    <div class="st-btn-wrap vrashi" title="МЕНЕ НАРАИЦА">
+                        <div class="st-btn like-it"><i class="icon-thumbs-up"></i></div>
+                    </div>
+                    <div class="st-btn-wrap" title="Закрыть стикер">
+                        <div class="st-btn close" id="close-sticker"><i class="icon-remove"></i></div>
+                    </div>
+                </div>
+                <div class="sticker-source-wrap">
+                    <div class="st-source-btn user active" title="Ваш стикер" ><i class="icon-useralt"></i></div>
+                    <div class="st-source-btn ezdict" title="Стикер EzDict"><i class="icon-notebook"></i></div>
+                    <div class="st-source-btn best " title="Лучший пользовательский стикер" ><i class="icon-star-empty"></i></div>
+                </div>
+                <div class="st-translate">
+                    <div class="st-source-translate" id="user-sticker">
+                        <span>Слово</span>
+                        <span>[Транскрипция]</span>
+                        <br>
+                                <span>Это стикер юзера! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nisi placeat quaerat necessitatibus quo libero in animi odio ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rerum quae suscipit delectus, nobis cum hic eos recusandae eius, nam atque aliquid consequuntur nihil quibusdam, a, enim. Minus, voluptate, vero!</span>
+                    </div>
+                    <div class="st-source-translate" id="ezdict-sticker">
+                        <span>Слово</span>
+                        <span>[Транскрипция]</span>
+                        <br>
+                                <span>Это стикер Яндекса! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nisi placeat quaerat necessitatibus quo libero in animi odio ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rerum quae suscipit delectus, nobis cum hic eos recusandae eius, nam atque aliquid consequuntur nihil quibusdam, a, enim. Minus, voluptate, vero!</span>
+                    </div>
+                    <div class="st-source-translate" id="best-sticker">
+                        <span>Слово</span>
+                        <span>[Транскрипция]</span>
+                        <br>
+                                <span>Это лучший пользовательский стикер! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nisi placeat quaerat necessitatibus quo libero in animi odio ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rerum quae suscipit delectus, nobis cum hic eos recusandae eius, nam atque aliquid consequuntur nihil quibusdam, a, enim. Minus, voluptate, vero!</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- STICKER END  -->
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+                <li class="slide-btn active"></li>
+                <li class="slide-btn"></li>
+                <li class="slide-btn"></li>
+            </ol>
+
+            <div class="carousel-item" id="first-slide">
+
                 <div class="text-wrap">
+
                     <h3>William Shakespear:</h3>
                     <div class="excerption-wrap">
                         <div class="author-photo">
                             <img src="img/sheks.png" alt="shekspier">
                         </div>
                         <div class="author-text">
-                            <p class="excerption"><i>Unthrifty loveliness, why dost thou spend Upon thyself thy beauty's legacy? Nature's bequest gives nothing, but doth lend, And being frank she lends to those are free: Then, beauteous niggard, why dost thou abuse The bounteous largess given thee to give? </i></p>
+                            <p class="excerption">
+                                <i>Unthrifty loveliness, why dost thou spend Upon thyself thy beauty's legacy? Nature's bequest gives nothing, but doth lend, And being frank she lends to those are free: Then, beauteous niggard, why dost thou abuse The bounteous largess given thee to give? </i>
+                            </p>
                         </div>
                     </div>
                     <div class="reg-btn">
                         <button type="button">Зарегистрироваться</button>
                     </div>
                 </div>
+            </div>
+
+            <div class="carousel-item" id="second-slide">
+                <div class="text-wrap">
+                    <h3>Charles Dickens:</h3>
+                    <div class="excerption-wrap">
+                        <div class="author-photo">
+                            <img src="img/dick.png" alt="shekspier">
+                        </div>
+                        <div class="author-text">
+                            <p class="excerption"><i>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the...
+                            </i></p>
+                        </div>
+                    </div>
+                    <div class="reg-btn">
+                        <button type="button">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item"id="third-slide">
+                <div class="text-wrap">
+                    <h3>Herbert George Wells:</h3>
+                    <div class="excerption-wrap">
+                        <div class="author-photo">
+                            <img src="img/wells.jpg" alt="shekspier">
+                        </div>
+                        <div class="author-text">
+                            <p class="excerption"><i>No one would have believed in the last years of the nineteenth century that this world was being watched keenly and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their various concerns they...</i></p>
+                        </div>
+                    </div>
+                    <div class="reg-btn">
+                        <button type="button">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-layout">
+    <!-- Принципы сервиса -->
+    <div class="promo-wrap">
+        <div class="promo-item first">
+            <table>
+                <tr>
+                    <td><div class="promo-img watch"></div></td>
+                    <td><h2>Трудно запоминать слова?</h2></td>
+                </tr>
+            </table>
+            <p>Мы фиксируем те слова, которые вам запоминать сложнее всего, также мы напомним вам когда время пройти тест.</p>
+        </div>
+        <div class="promo-item second">
+            <table>
+                <tr>
+                    <td><div class="promo-img diagramm"></div></td>
+                    <td><h2>Управляй своим прогрессом</h2></td>
+                </tr>
+            </table>
+            <p>Следите за своими успехами у себя в статистике, сравнивайте свои и чужие результаты.</p>
+        </div>
+        <div class="promo-item third">
+            <table>
+                <tr>
+                    <td  class="promo-header-wrap"><div class="promo-img dollar"></div></td>
+                    <td><h2>Cервис совершенно бесплатен</h2></td>
+                </tr>
+            </table>
+            <p>Все функции доступны совершенно бесплатно. Никаких платных слов и никаких дополнительных взносов.</p>
+        </div>
+    </div>
+    <!-- Конец принципов сервиса -->
+
+    <!-- Колонка новостей -->
+    <div class="news-col">
+
+        <div class="news-item">
+            <h3>YouTube теперь и на EzDict!</h3>
+            <div class="news-item-img">
+                <img src="img/youtube.jpg" alt="youtube">
+            </div>
+            <p class="news-item-txt">
+                Теперь доступен поиск видеозаписей с субтитрами по Ютубу
+            </p>
+            <div class="news-item-btn"></div>
+        </div>
+
+        <div class="news-item">
+            <h3>Сериалы теперь и на EzDict!</h3>
+            <div class="news-item-img">
+                <img src="img/kitchen.jpg" alt="youtube">
+            </div>
+            <p class="news-item-txt">
+                Теперь ты сможешь смотреть свой любимый сериал с переводом!
+            </p>
+            <div class="news-item-btn"></div>
+        </div>
+
+    </div>
+    <!-- Конец колонки новостей -->
+
+    <!-- Колонка контента -->
+    <div class="content-col">
+        <div class="popular-new-content">
+            <div class="pop-new-header">
+                <h3>Популярные</h3>
+            </div>
+            <div class="pop-new-col-1">
+                <div class="pop-new-item">
+                    <img src="img/gamesofthrones.jpg" alt="popular-content">
+                    <div class="item-annotation">
+                        <h4>Games of Thrones</h4>
+                        <div class="item-description-wrap">
+                            <div class="item-description-cell">
+                                <div class="item-description">
+                                    <h4>Games of Thrones</h4>
+                                    <p>Самый популярный сериал с драконами и геями, где все герои умирают так быстро, что смотреть смысла нет.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-new-item">
+                    <img src="img/braking-bad.jpg" alt="popular-content">
+                    <div class="item-annotation">
+                        <h4>Braking Bad</h4>
+                        <div class="item-description-wrap">
+                            <div class="item-description-cell">
+                                <div class="item-description">
+                                    <h4>Braking Bad</h4>
+                                    <p>Сериал про учителя, которые делает наркотики и растворяет трупы в ванной. Ну просто очень интересный.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-new-col-2">
+                <div class="pop-new-item item-large">
+                    <img src="img/brocken_lights.jpg" alt="popular-content">
+                    <div class="item-annotation">
+                        <h4>Streets of broken lights</h4>
+                        <div class="item-description-wrap">
+                            <div class="item-description-cell">
+                                <div class="item-description">
+                                    <h4>Streets of broken lights</h4>
+                                    <p>Приключенческий сериал про четырех приятелей милиционеров, расследующих невероятные преступления.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popular-new-content">
+            <div class="pop-new-header">
+                <h3>Новинки</h3>
+            </div>
+            <div class="pop-new-col-1">
+
+                <div class="pop-new-item">
+                    <img src="img/dexter.jpg" alt="popular-content">
+                    <div class="item-annotation">
+                        <h4>Dexter</h4>
+                        <div class="item-description-wrap">
+                            <div class="item-description-cell">
+                                <div class="item-description">
+                                    <h4>Dexter</h4>
+                                    <p>Сериал про маньяка, который убивает маньяков. По сути он тот же самый маньяк.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pop-new-item">
+                    <img src="img/under-dome.jpg" alt="popular-content">
+                    <div class="item-annotation">
+                        <h4>Under the Dome</h4>
+                        <div class="item-description-wrap">
+                            <div class="item-description-cell">
+                                <div class="item-description">
+                                    <h4>Under the Dome</h4>
+                                    <p>Сериал где весь город накрыло пи.. куполом.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop-new-col-2">
+                <div class="pop-new-item item-large">
+                    <img src="img/bandof.jpg" alt="popular-content">
+                    <div class="item-annotation">
+
+                        <h4>Band of Brothers</h4>
+
+                        <div class="item-description-wrap">
+                            <div class="item-description-cell">
+                                <div class="item-description">
+                                    <h4>Band of Brothers</h4>
+                                    <p>В сериале рассказывается о боевом пути роты E («Easy») 2-го батальона 506-го парашютно-десантного полка 101-й воздушно-десантной дивизии США от тренировочного лагеря в Таккоа, штат Джорджия, через высадку в Нормандии, операцию «Маркет Гарден» и Бастонское сражение до конца войны.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
-    <div class="main-layout">
-        <!-- Принципы сервиса -->
-        <div class="promo-wrap">
-            <div class="promo-item first">
-                <table>
-                    <tr>
-                        <td><div class="promo-img watch"></div></td>
-                        <td><h2>Трудно запоминать слова?</h2></td>
-                    </tr>
-                </table>
-                <p>Мы фиксируем те слова, которые вам запоминать сложнее всего, также мы напомним вам когда время пройти тест.</p>
-            </div>
-            <div class="promo-item second">
-                <table>
-                    <tr>
-                        <td><div class="promo-img diagramm"></div></td>
-                        <td><h2>Управляй своим прогрессом</h2></td>
-                    </tr>
-                </table>
-                <p>Следите за своими успехами у себя в статистике, сравнивайте свои и чужие результаты.</p>
-            </div>
-            <div class="promo-item third">
-                <table>
-                    <tr>
-                        <td  class="promo-header-wrap"><div class="promo-img dollar"></div></td>
-                        <td><h2>Cервис совершенно бесплатен</h2></td>
-                    </tr>
-                </table>
-                <p>Все функции доступны совершенно бесплатно. Никаких платных слов и никаких дополнительных взносов.</p>
-            </div>
-        </div>
-        <!-- Конец принципов сервиса -->
-
-        <!-- Колонка новостей -->
-        <div class="news-col">
-
-            <div class="news-item">
-                <h3>YouTube теперь и на EzDict!</h3>
-                <div class="news-item-img">
-                    <img src="img/youtube.jpg" alt="youtube">
-                </div>
-                <p class="news-item-txt">
-                    Теперь доступен поиск видеозаписей с субтитрами по Ютубу
-                </p>
-                <div class="news-item-btn"></div>
-            </div>
-
-            <div class="news-item">
-                <h3>Сериалы теперь и на EzDict!</h3>
-                <div class="news-item-img">
-                    <img src="img/kitchen.jpg" alt="youtube">
-                </div>
-                <p class="news-item-txt">
-                    Теперь ты сможешь смотреть свой любимый сериал с переводом!
-                </p>
-                <div class="news-item-btn"></div>
-            </div>
-
-        </div>
-        <!-- Конец колонки новостей -->
-
-        <!-- Колонка контента -->
-        <div class="content-col">
-            <div class="popular-new-content">
-                <div class="pop-new-header">
-                    <h3>Популярные</h3>
-                </div>
-                <div class="pop-new-col-1">
-                    <div class="pop-new-item">
-                        <img src="img/gamesofthrones.jpg" alt="popular-content">
-                        <div class="item-annotation">
-                            <h4>Games of Thrones</h4>
-                            <div class="item-description-wrap">
-                                <div class="item-description-cell">
-                                    <div class="item-description">
-                                        <h4>Games of Thrones</h4>
-                                        <p>Самый популярный сериал с драконами и геями, где все герои умирают так быстро, что смотреть смысла нет.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pop-new-item">
-                        <img src="img/braking-bad.jpg" alt="popular-content">
-                        <div class="item-annotation">
-                            <h4>Braking Bad</h4>
-                            <div class="item-description-wrap">
-                                <div class="item-description-cell">
-                                    <div class="item-description">
-                                        <h4>Braking Bad</h4>
-                                        <p>Сериал про учителя, которые делает наркотики и растворяет трупы в ванной. Ну просто очень интересный.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pop-new-col-2">
-                    <div class="pop-new-item item-large">
-                        <img src="img/brocken_lights.jpg" alt="popular-content">
-                        <div class="item-annotation">
-                            <h4>Streets of broken lights</h4>
-                            <div class="item-description-wrap">
-                                <div class="item-description-cell">
-                                    <div class="item-description">
-                                        <h4>Streets of broken lights</h4>
-                                        <p>Приключенческий сериал про четырех приятелей милиционеров, расследующих невероятные преступления.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popular-new-content">
-                <div class="pop-new-header">
-                    <h3>Новинки</h3>
-                </div>
-                <div class="pop-new-col-1">
-
-                    <div class="pop-new-item">
-                        <img src="img/dexter.jpg" alt="popular-content">
-                        <div class="item-annotation">
-                            <h4>Dexter</h4>
-                            <div class="item-description-wrap">
-                                <div class="item-description-cell">
-                                    <div class="item-description">
-                                        <h4>Dexter</h4>
-                                        <p>Сериал про маньяка, который убивает маньяков. По сути он тот же самый маньяк.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pop-new-item">
-                        <img src="img/under-dome.jpg" alt="popular-content">
-                        <div class="item-annotation">
-                            <h4>Under the Dome</h4>
-                            <div class="item-description-wrap">
-                                <div class="item-description-cell">
-                                    <div class="item-description">
-                                        <h4>Under the Dome</h4>
-                                        <p>Сериал где весь город накрыло пи.. куполом.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pop-new-col-2">
-                    <div class="pop-new-item item-large">
-                        <img src="img/bandof.jpg" alt="popular-content">
-                        <div class="item-annotation">
-                            <h4>Band of Brothers</h4>
-                            <div class="item-description-wrap">
-                                <div class="item-description-cell">
-                                    <div class="item-description">
-                                        <h4>Band of Brothers</h4>
-                                        <p>Бравые ребята во 2 мировой.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Конец колонки контента -->
-    </div>
+    <!-- Конец колонки контента -->
+</div>
 </div>
