@@ -18,7 +18,7 @@ $(document).ready(function() {
     $('.slide-btn').on('click',function(){
         $('.slide-btn').removeClass('active');
         $(this).addClass('active');
-        $('.carousel-item').addClass('next').stop().fadeOut(400,function(){$(this).removeClass('next')});
+        $('.carousel-item').addClass('next').stop().fadeOut(400,function(){$(this).removeClass('next');});
         var index = $(this).index();
         $('.carousel-item').eq(index).stop().fadeIn();
     });
@@ -45,11 +45,12 @@ $(document).ready(function() {
                 $('.st-source-translate').eq(index).stop().fadeIn(200);
             });
             $('.sticker').find('.slimScrollBar').animate({'top':'0'},300);
-        };
+        }
     });
 
     $('#close-sticker').on('click',function(){
         $('.sticker').fadeOut();
+
     });
 
 });

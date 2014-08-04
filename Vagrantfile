@@ -16,6 +16,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   config.vm.network "private_network", ip: "192.168.50.4"
 
+  config.proxy.http     = "http://proxy.picompany.ru:8080"
+  config.proxy.https    = "http://proxy.picompany.ru:8080"
+  config.proxy.no_proxy = "localhost,127.0.0.1"
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
