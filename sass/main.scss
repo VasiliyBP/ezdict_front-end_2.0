@@ -16,36 +16,16 @@ h6 {font-size: 12px;}
 img{
   max-width: 100%;
 }
-
-.index-wrapp {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
+.main-wrap {
   background: #e5eef2;
-  overflow-y: auto;
 }
-
-.login-logo-wrap{
+.login-search-wrap{
   @include pie-clearfix;
-}
-.header-pattern {
-  @include pie-clearfix;
-  background: url('../img/header_pattern4.gif') center center ;
-  overflow: hidden;
-}
-
-.header-layout{
-  position: relative;
-  width:100%;
-  max-width:$main-width;
-  margin:0 auto;
+  margin-top: -20px;
 }
 header{
   max-width: 890px; /*51.02040816326531%;*/
-  margin: 0 auto 20px  ;
-  padding-top: 15px;
+  margin: 0 auto;
   ::-webkit-input-placeholder { /* WebKit browsers */
     color: $font-main-color;
   }
@@ -64,6 +44,7 @@ header{
   input:focus::-webkit-input-placeholder {color: transparent;}
   input:focus:-moz-placeholder {color: transparent;}
   input:focus:-ms-input-placeholder {color: transparent;}
+ 
 }
 .logo-wrap{
   vertical-align: bottom;
@@ -71,20 +52,21 @@ header{
   float: left;
 }
 .login-btn{
-  margin-top: -5px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-weight: bold;
+   @include pie-clearfix;
   span{
+    float: right;
+    color: $font-main-color;
     cursor: pointer;
   }
 }
-.search-login-wrap{
-  margin-left:2.666666666666667% ;
+.search-wrap{
+  margin: 12px 0 0 2.666666666666667% ;
   width: 53.33333333333333%;
   float: right;
   color: $font-main-color;
   text-align: right ;
-
 }
 .search-form {
   color: $font-main-color;
@@ -108,8 +90,6 @@ header{
 .carousel-wrap{
   position: relative;
   min-height: 525px;
-  
- 
 }
 .carousel-indicators {
   position: absolute;
@@ -146,7 +126,6 @@ header{
   padding-bottom: 30px;
   position: relative;
   width: 100%;
-  
 }
 .carousel-item.next {
   position: absolute;
@@ -164,14 +143,13 @@ header{
 #third-slide {
   background: url('../img/war-sharpen.png') no-repeat bottom center;
 }
-
 .text-wrap{
   position: relative;
   color: $font-main-color;
   max-width: 890px ; /*51.02040816326531% ;*/
   background: rgba(55, 27, 23, 0.20);
   margin: 0 auto;
-  padding: 30px 4% 150px;
+  padding: 30px 4%;
   @include border-radius(10px);
   @include box-sizing(border-box);
   h3 {
@@ -218,7 +196,6 @@ header{
   img {
     @include border-radius(100px);
   }
-
 }
 .author-text {
   font-size: 16px;
@@ -232,13 +209,8 @@ header{
 .reg-btn {
   width: 315px; //ie position center hack
   max-width: 315px;
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  margin: 35px auto 0 auto;
   text-align: center;
-
   button {
     font-size: 24px;
     color: $font-main-color;
@@ -247,12 +219,10 @@ header{
     background: rgba(7,78,114,0.65);
     border: none;
     @include box-shadow(black 0 0 30px);
-
     &:hover {
       cursor: pointer;
       background: rgba(7,78,114,0.9);
     }
-
     &:active {
       background: rgba(42,157,214,0.8);
     }
@@ -264,7 +234,7 @@ header{
   @include pie-clearfix;
 }
 .promo-wrap{
-  margin: 20px 0;
+  padding: 20px 0;
   @include pie-clearfix;
 }
 .promo-item{
@@ -322,12 +292,10 @@ header{
   h3{
     font-weight: 500;
   }
-
 }
 .news-item-img {
   margin: 20px 0;
   text-align: center;
-
 }
 .news-item-txt{
   font-size: 20px;
@@ -404,7 +372,6 @@ header{
   height: 100%;
   display: none;
 }
-
 .item-description-wrap .item-description-cell {
   display: table-cell;
   vertical-align: middle;
@@ -418,18 +385,15 @@ header{
     line-height: 18px;
     margin-bottom: 10px;
   }
-
 }
 .pop-new-col-2{
   text-align: center;
   width: 52.80898876404494%;
   float:left;
 }
-
 .item-large{
   margin-bottom: 3.191489361702128%;
 }
-
 .news-col, .content-col {
   float:left;
 }
@@ -438,7 +402,6 @@ header{
   margin: 0 0.6802721088435374%;
   height: 100%;
   width: 36.73469387755102%;
-
 }
 .content-col {
   float:left;
@@ -508,7 +471,6 @@ header{
 }
 .st-btn-wrap{
   cursor: pointer;
-
 }
 .st-btn{
   font-size: 18px;
@@ -544,7 +506,6 @@ header{
     font-weight: 800;
     color: #20a034;
   }
-
 }
 .counter.warning1 {
   background:#efd7d7;
@@ -564,16 +525,13 @@ header{
     color:white;
   }
 }
-
 .st-btn.edit {
   //background: #109926 url('../img/promo-nav.png') -50px -80px no-repeat;
 }
-
 .st-btn.add-new {
   //background: #109926 url('../img/promo-nav.png') -75px -80px no-repeat;
   display: none;
 }
-
 .st-btn.add-to-learning {
 
 }
@@ -582,14 +540,11 @@ header{
   display: none;
 
 }
-
 .st-btn.close {
   font-size: 14px;
 
  // background: #109926 url('../img/promo-nav.png') 0px -80px no-repeat;
  }
-
-
 .vrashi:hover .st-btn  {
   -webkit-animation: rotating 1s linear infinite;
   -moz-animation: rotating 1s linear infinite;
@@ -754,7 +709,7 @@ header{
     text-align: center;
     width: 100%;
   }
-  .search-login-wrap{
+  .search-wrap{
     width: 100%;
   }
   .reg-btn {
