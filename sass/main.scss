@@ -21,7 +21,8 @@ img{
 }
 .login-search-wrap{
   @include pie-clearfix;
-  margin-top: -20px;
+ // margin-top: -20px;
+ margin: 10px 0;
 }
 header{
   max-width: 890px; /*51.02040816326531%;*/
@@ -61,12 +62,39 @@ header{
     cursor: pointer;
   }
 }
-.search-wrap{
-  margin: 12px 0 0 2.666666666666667% ;
+.navigation-bar{
+  margin: 27px 0 0 2.666666666666667% ;
   width: 53.33333333333333%;
   float: right;
   color: $font-main-color;
   text-align: right ;
+  font-size: 0;
+  vertical-align: bottom;
+}
+.nav-btn{
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    @include text-shadow(0 0 1px white);
+    &:hover{
+      background: #6cafe2;
+    }
+    &:active {
+      background: #224f71;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .nav-bnt.active {
+    background: #224f71;
+  }
+.search-wrap{
+  margin: 12px 0 12px 0 ;
+  width: 100%;
+  color: $font-main-color;
+
 }
 .search-form {
   color: $font-main-color;
@@ -83,7 +111,7 @@ header{
 .appeal{
   color: $font-main-color;
   p {
-    margin: 1em 0;
+    margin: 0.6em 0;
     font-size: 25px;
   }
 }
@@ -533,16 +561,13 @@ header{
   display: none;
 }
 .st-btn.add-to-learning {
-
 }
 .st-btn.like-it {
   font-size: 17px;
   display: none;
-
 }
 .st-btn.close {
   font-size: 14px;
-
  // background: #109926 url('../img/promo-nav.png') 0px -80px no-repeat;
  }
 .vrashi:hover .st-btn  {
@@ -552,32 +577,26 @@ header{
   -o-animation: rotating 1s linear infinite;
   animation: rotating 1s linear infinite;
 }
-
 @keyframes rotating {
   0% {
     @include transform(rotateY(0deg));
   }
-
   50% {
     background: #0e761f;
     @include transform(rotateY(180deg));
   }
-
   100% {
     @include transform(rotateY(360deg));
  }
 }
-
 @-webkit-keyframes rotating /* Safari and Chrome */ { 
   0% {
     @include transform(rotateY(0deg));
   }
-
   50% {
     background: #0e761f;
     @include transform(rotateY(180deg));
   }
-
   100% {
     @include transform(rotateY(360deg));
  }
@@ -660,26 +679,22 @@ header{
 }
 
 @media only screen and (max-width: 992px) {
+  
   /*promo*/
 
   .promo-item.first{
     width: 48.6394557823%;
-
   }
   .promo-item.second{
     width: 48.6394557823%;
-
   }
   .promo-item.third {
     margin-top: 5px;
     width: 98.63945578231293%;
     min-height: 100%
-
   }
   /*end-promo*/
-
   /*news*/
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -709,7 +724,8 @@ header{
     text-align: center;
     width: 100%;
   }
-  .search-wrap{
+  .navigation-bar{
+    text-align: center;
     width: 100%;
   }
   .reg-btn {
@@ -734,5 +750,4 @@ header{
       text-align: center;
     }
   }
-
 }
