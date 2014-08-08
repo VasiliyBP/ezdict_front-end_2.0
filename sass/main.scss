@@ -19,7 +19,7 @@ img{
 .main-wrap {
   background: #e5eef2;
 }
-.login-search-wrap{
+.login-nav-wrap{
   @include pie-clearfix;
  // margin-top: -20px;
  margin: 10px 0;
@@ -27,6 +27,7 @@ img{
 header{
   max-width: 890px; /*51.02040816326531%;*/
   margin: 0 auto;
+  font-size: 0;
   ::-webkit-input-placeholder { /* WebKit browsers */
     color: $font-main-color;
   }
@@ -63,7 +64,8 @@ header{
   }
 }
 .navigation-bar{
-  margin: 28px 0 0 2.666666666666667% ;
+  margin: 10px 0 0 2.666666666666667% ;
+
   width: 53.33333333333333%;
   float: right;
   color: $font-main-color;
@@ -73,12 +75,13 @@ header{
 
 }
 .nav-btn{
-    padding: 5px;
-    margin-left: 15px;
+    padding: 10px;
+    margin-left: 10px;
     font-size: 28px;
     cursor: pointer;
     @include text-shadow(0 0 1px white);
     //@include border-radius(3px);
+    line-height: 50px;
     &:hover{
       background: #6cafe2;
     }
@@ -86,19 +89,22 @@ header{
       background: #224f71;
     }
     &:first-child {
-      margin-left: 0;
+      //margin-left: 0;
     }
   }
   .nav-btn.active {
     background: #224f71;
   }
 .search-wrap{
-  margin: 12px 0 12px 0 ;
+  font-size: 0;
+  display: none;
+  margin: 12px 0;
   width: 100%;
   color: $font-main-color;
 
 }
 .search-form {
+
   color: $font-main-color;
   font-size:16px;
   font-style: italic;

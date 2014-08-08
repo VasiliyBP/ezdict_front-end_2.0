@@ -19,13 +19,10 @@ $(document).ready(function(){
 //  поиск
      $(document).on('click','.icon-search',function(){
         if($('.search-wrap').is(':visible')) {
-            $('.search-wrap').stop().fadeOut();
-
+            $('.search-wrap').stop().hide();//animate({'marginTop':'0','margin-bottom':'0','height':'0'},400).fadeOut();
         } else {
-            $('.search-wrap').stop().fadeIn();
-
+            $('.search-wrap').stop().show();//fadeIn().animate({'marginTop':'12px','margin-bottom':'12px','height':'35px'},400);
         }
-        
     });
 // Анимация аннотаций контента   
     $('.pop-new-item').on('mouseenter', function(){
