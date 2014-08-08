@@ -1,5 +1,5 @@
 angular.module('index').controller('IndexCtrl',function($scope){
-
+//Слимскролл
 $(document).ready(function(){
     $('.st-translate').slimScroll({
         distance: '5px',
@@ -11,6 +11,23 @@ $(document).ready(function(){
         height:'100%',
         size: '4px'
     });
+//  Навигация, кнопки
+    $(document).on('click','.user-navigation',function(){
+        $('.nav-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+//  поиск
+     $(document).on('click','.icon-search',function(){
+        if($('.search-wrap').is(':visible')) {
+            $('.search-wrap').stop().fadeOut();
+
+        } else {
+            $('.search-wrap').stop().fadeIn();
+
+        }
+        
+    });
+// Анимация аннотаций контента   
     $('.pop-new-item').on('mouseenter', function(){
             $(this).find('.item-annotation').stop().animate({'height':'100%'},'fast', function(){
                 $(this).find('.item-description-wrap').stop().fadeIn('fast').css('display','table');
@@ -20,7 +37,7 @@ $(document).ready(function(){
         $(this).find('.item-description-wrap').css('display','none');
         $(this).find('.item-annotation').stop().animate({'height':'40px'}, 'fast'); 
     }); 
-
+// Карусель, слайды
     $('.slide-btn').on('click',function(){
         if(!$(this).hasClass('active')) {
             $('.slide-btn').removeClass('active');
@@ -30,7 +47,7 @@ $(document).ready(function(){
             $('.carousel-item').eq(index).stop().fadeIn();
         }
     });
-
+//стикер
     $('.slide-down-btn').on('click', function(){
         if (!$('.st-translate').hasClass('large')) {
             $(this).toggleClass('slide-up');
