@@ -11,18 +11,14 @@ $(document).ready(function(){
         height:'100%',
         size: '4px'
     });
-//  Навигация, кнопки
+//  Навигация по сайту, кнопки
     $(document).on('click','.user-navigation',function(){
         $('.nav-btn').removeClass('active');
         $(this).addClass('active');
     });
-//  поиск
+//  Анимация поиска
      $(document).on('click','.icon-search',function(){
-        if($('.search-wrap').is(':visible')) {
-            $('.search-wrap').stop().hide();//animate({'marginTop':'0','margin-bottom':'0','height':'0'},400).fadeOut();
-        } else {
-            $('.search-wrap').stop().show();//fadeIn().animate({'marginTop':'12px','margin-bottom':'12px','height':'35px'},400);
-        }
+            $('.search-wrap').stop().slideToggle();
     });
 // Анимация аннотаций контента   
     $('.pop-new-item').on('mouseenter', function(){
