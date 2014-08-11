@@ -64,20 +64,16 @@ header{
 }
 .nav-btn{
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 2.105263157894737%;
     font-size: 28px;
     cursor: pointer;
-    @include text-shadow(0 0 1px white);
-    //@include border-radius(3px);
     line-height: 50px;
+    @include text-shadow(0 0 1px white);
     &:hover{
       background: #6cafe2;
     }
     &:active {
       background: #224f71;
-    }
-    &:first-child {
-      //margin-left: 0;
     }
   }
   .nav-btn.active {

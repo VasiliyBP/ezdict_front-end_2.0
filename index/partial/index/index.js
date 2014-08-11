@@ -6,7 +6,6 @@ $(document).ready(function(){
         height: '100%',
         size: '4px',
     });
-
     $('.item-annotation-inner').slimScroll({
         height:'100%',
         size: '4px'
@@ -17,14 +16,14 @@ $(document).ready(function(){
         $(this).addClass('active');
     });
 //  Анимация поиска
-     $(document).on('click','.icon-search',function(){
+    $(document).on('click','.icon-search',function(){
             $('.search-wrap').stop().slideToggle();
     });
 // Анимация аннотаций контента   
     $('.pop-new-item').on('mouseenter', function(){
             $(this).find('.item-annotation').stop().animate({'height':'100%'},'fast', function(){
                 $(this).find('.item-description-wrap').stop().fadeIn('fast').css('display','table');
-                });
+            });
         }); 
     $('.pop-new-item').on('mouseleave', function(){
         $(this).find('.item-description-wrap').css('display','none');
@@ -51,7 +50,6 @@ $(document).ready(function(){
             $('.st-translate').toggleClass('large').scrollTop(0);
             $('.like-it').stop().fadeToggle('fast');
         }
-        
     });
     $('.st-source-btn').on('click',function(){
         if(!$(this).hasClass('active')){
@@ -71,9 +69,4 @@ $(document).ready(function(){
     });
 
 });
-
-
-
-
-
 });
